@@ -135,4 +135,3 @@ export const MobileLabel = forwardRef<HTMLLabelElement, MobileLabelProps>(
   },
 )
 MobileLabel.displayName = 'MobileLabel'
-MobileLabel.displayName = 'MobileLabel'

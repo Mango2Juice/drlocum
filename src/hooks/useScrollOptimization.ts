@@ -159,7 +159,7 @@ export function useLazyLoad<T extends HTMLImageElement>() {
         for (const entry of entries) {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement
-            const src = img.dataset.src
+            const { src } = img.dataset
 
             if (src) {
               img.src = src

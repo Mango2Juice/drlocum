@@ -52,10 +52,10 @@ function QuestionRow({
         aria-label={question.text}
       >
         {[
-          { v: '0', label: '0\n          — Not at all' },
-          { v: '1', label: '1\n          — A little' },
-          { v: '2', label: '2\n          — Quite a bit' },
-          { v: '3', label: '3\n          — Very much' },
+          { v: '0', description: 'Not at all' },
+          { v: '1', description: 'A little' },
+          { v: '2', description: 'Quite a bit' },
+          { v: '3', description: 'Very much' },
         ].map((opt) => (
           <div key={opt.v} className='flex flex-col items-start space-y-1'>
             <div className='flex items-center space-x-2'>
@@ -65,7 +65,7 @@ function QuestionRow({
               </Label>
             </div>
             <span className='text-xs text-muted-foreground leading-tight'>
-              {opt.label.split('\n')[1]?.trim() ?? ''}
+              — {opt.description}
             </span>
           </div>
         ))}
@@ -144,7 +144,7 @@ export default function DassScorePage() {
         </p>
       </div>
 
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={handleSubmit}>
         <Card>
           <CardHeader>
             <div className='w-full'>
