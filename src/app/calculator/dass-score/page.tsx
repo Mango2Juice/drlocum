@@ -64,9 +64,7 @@ function QuestionRow({
                 {opt.v}
               </Label>
             </div>
-            <span className='text-xs text-muted-foreground leading-tight'>
-              — {opt.description}
-            </span>
+            <span className='text-xs text-muted-foreground leading-tight'>— {opt.description}</span>
           </div>
         ))}
       </RadioGroup>

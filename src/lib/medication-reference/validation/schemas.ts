@@ -37,7 +37,7 @@ const DosingProfileSchema = z
     },
     {
       path: ['minAge'],
-        error: 'minAge must be less than maxAge'
+      error: 'minAge must be less than maxAge',
     },
   )
   .refine(
@@ -49,7 +49,7 @@ const DosingProfileSchema = z
     },
     {
       path: ['maxDoseUnit'],
-        error: 'maxDoseUnit is required when maxDose is provided, and vice-versa.'
+      error: 'maxDoseUnit is required when maxDose is provided, and vice-versa.',
     },
   )
 

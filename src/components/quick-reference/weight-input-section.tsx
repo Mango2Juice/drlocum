@@ -30,9 +30,7 @@ export function WeightInputSection({ disabled }: Readonly<WeightInputSectionProp
   const descriptionId = useId()
 
   // Local input string preserves what the user types (including "15." or ".5")
-  const [localValue, setLocalValue] = useState<string>(
-    displayWeight === undefined ? '' : String(displayWeight),
-  )
+  const [localValue, setLocalValue] = useState<string>(displayWeight === undefined ? '' : String(displayWeight))
 
   const handleInputChange = useCallback(
     (value: string) => {
@@ -67,7 +65,7 @@ export function WeightInputSection({ disabled }: Readonly<WeightInputSectionProp
     if (displayStr !== localValue) {
       setLocalValue(displayStr)
     }
-  }, [displayWeight])
+  }, [displayWeight, localValue])
 
   return (
     <div className='relative' id='weight-input'>

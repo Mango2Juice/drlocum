@@ -110,7 +110,7 @@ export function PregnancyResults({ pregnancyInfo }: Readonly<PregnancyResultsPro
             <ResultCard
               title='Probable Conception'
               value={format(pregnancyInfo.conceptionDate, 'MMM d, yyyy')}
-                            description='Approx. 2 weeks after LMP'
+              description='Approx. 2 weeks after LMP'
             />
           </div>
 

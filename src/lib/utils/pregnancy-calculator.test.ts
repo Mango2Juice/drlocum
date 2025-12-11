@@ -102,7 +102,7 @@ describe('calculatePregnancyInfo with mocked date', () => {
     expect(result).not.toBeNull()
     if (!result) return
 
-        // First milestone: "Blood Screening" starts at 10 weeks
+    // First milestone: "Blood Screening" starts at 10 weeks
     const firstMilestone = result.milestoneDates[0]
     const expectedStart = add(lmp, { weeks: 10 })
     expect(firstMilestone?.dateRange).toContain(expectedStart.getDate().toString())
@@ -215,4 +215,3 @@ describe('calculatePregnancyFromEdd (reverse ultrasound method)', () => {
     expect(result.gestationalAgeWeeks).toBeGreaterThan(40)
   })
 })
-
